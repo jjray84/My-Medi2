@@ -1,6 +1,9 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+const emergencyContactSchema = require("./EmergencyContact");
+const medicationSchema = require("./Medication");
+
 const userScehma = new Schema({
 	username: {
 		type: String,
@@ -19,22 +22,19 @@ const userScehma = new Schema({
 		required: true,
 		minlength: 8,
 	},
-	emergency_contacts: [
-		{
-			first_name: {
-				type: String,
-				required: true,
-			},
-			last_name: {
-				type: String,
-				required: true,
-			},
-			phone_number: {
-				type: Number,
-				required: true,
-			},
-		},
-	],
+	emergency_contacts: [emergencyContactSchema],
+	allergies: {
+		type: [String],
+		default: "No Known Allergies",
+	},
+	code_status: {
+		type: String,
+		default: "Full Code",
+	},
+	advanced_directive: {
+		type: Boolean,
+	},
+	medications: [medicationSchema],
 });
 
 const User = model("User", userScehma);
