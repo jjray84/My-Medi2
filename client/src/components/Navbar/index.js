@@ -4,11 +4,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <div>
-    <Navbar>
-      <div>
-        <p>My Medi</p>
-      </div>
-    </Navbar>
+        <h1>My Medi</h1>
     </div>
   );
 }
