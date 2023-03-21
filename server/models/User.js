@@ -62,6 +62,10 @@ const userScehma = new Schema({
 		type: Boolean,
 	},
 
+	religious_preferences: {
+		type: String,
+	},
+
 	providers: [providerSchema],
 
 	medical_history: {
