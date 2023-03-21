@@ -5,7 +5,7 @@ const emergencyContactSchema = require("./EmergencyContact");
 const medicationSchema = require("./Medication");
 const providerSchema = require("./Provider");
 
-const userScehma = new Schema({
+const userSchema = new Schema({
 	username: {
 		type: String,
 		require: true,
@@ -94,6 +94,6 @@ userSchema.methods.verifyPassword = async function (password) {
 	return bcrypt.compare(password, this.password);
 };
 
-const User = model("User", userScehma);
+const User = model("User", userSchema);
 
 module.exports = User;

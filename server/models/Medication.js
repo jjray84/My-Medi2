@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, Types } = require("mongoose");
 
 const medicationSchema = new Schema({
 	drug_name: {
@@ -7,7 +7,7 @@ const medicationSchema = new Schema({
 	},
 
 	dosage: {
-		type: Decimal128,
+		type: Types.Decimal128,
 		required: true,
 	},
 

@@ -1,5 +1,9 @@
-// import models when ready
+const { User } = require("../models");
 
-const resolvers = {};
+const resolvers = {
+	Query: {
+		users: async () => await User.find({}),
+	},
+};
 
 module.exports = resolvers;
