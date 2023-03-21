@@ -22,6 +22,8 @@
 	},
 	"homepage": "https://github.com/jjray84/My-Medi2#readme",
 	"dependencies": {
-		"concurrently": "^7.6.0"
+		"bootstrap": "^5.2.3",
+		"concurrently": "^7.6.0",
+		"react-router-dom": "^6.9.0"
 	}
 }
